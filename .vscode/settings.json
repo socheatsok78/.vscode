@@ -1,154 +1,83 @@
 {
-  // Security settings
-  "security.workspace.trust.enabled": false,
+    // Security Settings
+    "security.workspace.trust.enabled": false,
 
-  // Extension settings
-  "extensions.autoUpdate": "onlyEnabledExtensions",
+    // Window Settings
+    "window.commandCenter": true,
 
-  // Git settings
-  "git.autofetch": false,
-  "git.autorefresh": false,
+    // Workbench Settings
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.preferredLightColorTheme": "GitHub Dark Default",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.startupEditor": "welcomePage",
 
-  // Workbench settings
-  "breadcrumbs.enabled": true,
-  "workbench.tips.enabled": false,
-  "workbench.startupEditor": "welcomePage",
-  "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "GitHub Dark",
-  "workbench.preferredDarkColorTheme": "GitHub Dark",
-  "workbench.preferredLightColorTheme": "GitHub Light",
-  "workbench.iconTheme": "city-lights-icons-vsc",
-  "workbench.productIconTheme": "fluent-icons",
+    // Explorer Settings
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        ".env": ".env.*",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
+    },
 
-  // Editors settings
-  "editor.fontFamily": "Fira Code, Kantumruy, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontWeight": "500",
-  "editor.fontSize": 12,
-  "editor.fontLigatures": true,
-  "editor.smoothScrolling": true,
-  "editor.suggestSelection": "first",
-  "editor.renderWhitespace": "boundary",
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.formatOnPaste": true,
-  "editor.glyphMargin": true,
-  "editor.scrollBeyondLastLine": true,
-  "editor.scrollBeyondLastColumn": 5,
-  "editor.maxTokenizationLineLength": 60000,
-  "editor.accessibilitySupport": "off",
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
-  "editor.guides.bracketPairs": true,
-  "editor.guides.indentation": true,
+    // Editor Settings
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.smoothScrolling": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.glyphMargin": true,
+    "editor.scrollBeyondLastLine": true,
+    "editor.scrollBeyondLastColumn": 5,
+    "editor.accessibilitySupport": "off",
+    "editor.cursorSmoothCaretAnimation": "on",
 
-  // Files settings
-  "files.autoSave": "onFocusChange",
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "files.associations": {
-    ".huskyrc": "json",
-    "*.plist": "xml",
-    "Brewfile": "ruby",
-    "*.Brewfile": "ruby",
-    "Dockerfile*": "dockerfile",
-    ".zsh_*": "shellscript",
-    "*.conf": "nginx",
-    "*.bs": "markdown",
-    "*.mdx": "markdown",
-    "*.cfg": "plaintext",
-    "*.hcl": "sentinel",
-    ".env*": "dotenv"
-  },
+    // Editor File Settings
+    "editor.guides.bracketPairs": true,
+    "editor.guides.indentation": true,
+    "editor.maxTokenizationLineLength": 20000,
 
-  // Terminal settings
-  "terminal.integrated.tabs.enabled": false,
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontFamily": "'FiraCode Nerd Font', Kantumruy",
-  "terminal.integrated.fontWeight": "500",
-  "terminal.integrated.cursorStyle": "underline",
-  "terminal.integrated.showExitAlert": false,
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.integrated.defaultProfile.windows": "wsl.exe",
-  "terminal.integrated.gpuAcceleration": "on",
+    // Editor Format Settings
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": false
+    },
 
-  // Extension configs
-  "go.useLanguageServer": true,
-  "atomKeymap.promptV3Features": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "javascript.updateImportsOnFileMove.enabled": "never",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "eslint.alwaysShowStatus": true,
-  "eslint.packageManager": "yarn",
-  "redhat.telemetry.enabled": false,
-  "go.toolsManagement.autoUpdate": true,
-  "importCost.typescriptExtensions": ["\\.tsx?$", "\\.vue$"],
+    // File Settings
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": false,
 
-  // File Nesting
-  // this might not be up to date with the repo, please check yourself
-  // updated 2022-03-10 06:10
-  // https://github.com/antfu/vscode-file-nesting-config
-  "explorer.experimental.fileNesting.enabled": true,
-  "explorer.experimental.fileNesting.patterns": {
-    "*.ts": "$(capture).ts, $(capture).d.ts, $(capture).test.ts",
-    "*.js": "$(capture).js.map, $(capture).min.js, $(capture).d.ts, $(capture).test.js",
-    "*.jsx": "$(capture).js",
-    "*.tsx": "$(capture).ts, $(capture).*.ts, $(capture).*.tsx",
-    ".env": ".env.*",
-    "tsconfig.json": "tsconfig.*.json",
-    "docker-compose.yml": "docker-compose.*.yml",
-    "next.config.*": "next-env.d.ts",
-    "package.json": "package-lock.json, .npmrc, .yarnrc, yarn.lock, yarn-error.log"
-  },
+    // Git Settings
+    "git.autofetch": false,
+    "git.autorefresh": false,
 
-  // Language Settings
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "johnsoncodehk.volar"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[dart]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.rulers": [80],
-    "editor.selectionHighlight": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": false,
-    "files.trimTrailingWhitespace": false
-  },
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-path.mac": "/Users/socheat/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vs-kubernetes.helm-path.mac": "/Users/socheat/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vs-kubernetes.draft-path.mac": "/Users/socheat/.vs-kubernetes/tools/draft/darwin-amd64/draft",
-    "vs-kubernetes.kubectl-path.mac": "/Users/socheat/.vs-kubernetes/tools/kubectl/kubectl",
-    "vscode-kubernetes.kubectl-path.mac": "/Users/socheat/.vs-kubernetes/tools/kubectl/kubectl",
-    "vscode-kubernetes.minikube-path.mac": "/Users/socheat/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vscode-kubernetes.helm-path.mac": "/Users/socheat/.vs-kubernetes/tools/helm/darwin-amd64/helm"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+    // Terminal Settings
+    "terminal.integrated.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.gpuAcceleration": "auto",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.showExitAlert": false,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+
+    // DotENV Overrides
+    "dotenv.enableAutocloaking": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword.other.dotenv",
+                "settings": {
+                    "foreground": "#FF000000"
+                }
+            }
+        ]
+    }
 }
