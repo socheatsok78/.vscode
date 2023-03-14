@@ -14,18 +14,6 @@
     "workbench.productIconTheme": "fluent-icons",
     "workbench.startupEditor": "welcomePage",
 
-    // Explorer Settings
-    "explorer.fileNesting.enabled": true,
-    "explorer.fileNesting.patterns": {
-        "*.ts": "${capture}.js",
-        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-        "*.jsx": "${capture}.js",
-        "*.tsx": "${capture}.ts",
-        ".env": ".env.*",
-        "tsconfig.json": "tsconfig.*.json",
-        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
-    },
-
     // Editor Settings
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
@@ -36,7 +24,7 @@
     "editor.scrollBeyondLastLine": true,
     "editor.scrollBeyondLastColumn": 5,
     "editor.accessibilitySupport": "off",
-    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSmoothCaretAnimation": "off",
 
     // Editor File Settings
     "editor.guides.bracketPairs": true,
@@ -68,16 +56,15 @@
     "terminal.integrated.showExitAlert": false,
     "terminal.integrated.shellIntegration.decorationsEnabled": "never",
 
-    // DotENV Overrides
-    "dotenv.enableAutocloaking": true,
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": "keyword.other.dotenv",
-                "settings": {
-                    "foreground": "#FF000000"
-                }
-            }
-        ]
-    }
+    // Explorer Settings
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        ".env": ".env.*",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
+    },
 }
